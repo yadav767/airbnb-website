@@ -9,10 +9,8 @@ const listingSchema = new mongoose.Schema({
     },
     description: String,
     image: {
-        type: String,
-        default: "https://media.istockphoto.com/id/508184291/photo/office-buildings-in-financial-district-la-defense-paris-france.webp?a=1&b=1&s=612x612&w=0&k=20&c=cwRduaCCqZxdLDNT9BYKgHijkxB8zfJkvlKAc6SXg-w=",
-        set: (v) => v == "" ? "https://media.istockphoto.com/id/508184291/photo/office-buildings-in-financial-district-la-defense-paris-france.webp?a=1&b=1&s=612x612&w=0&k=20&c=cwRduaCCqZxdLDNT9BYKgHijkxB8zfJkvlKAc6SXg-w=" : v,
-
+        url:String,
+        filename:String,
     },
     price: Number,
     location: String,
