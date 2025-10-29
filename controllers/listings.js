@@ -38,7 +38,7 @@ module.exports.editListing = async (req, res) => {
     }
     let originalImage = listing.image.url;
     originalImage=originalImage.replace("/upload/", "/upload/h_300,w_250");
-    res.render("listings/edit.ejs", { originalImage })
+    res.render("listings/edit.ejs", { listing,originalImage });
 
 }
 module.exports.updateListing = async (req, res) => {
